@@ -1,0 +1,21 @@
+Nästa Gång: 
+ plocka bort logic samt annat från GussTheFlagGame.tsx
+
+
+SettingsPage:
+ 1. Darkmode
+ 2. Account Features
+
+Games:
+ 1. GussTheFlag
+ 2. Daily CHallenge
+ 3. Gissa landet på kartan
+ 4. Mer Kommer
+
+Profile:
+  Prio: FLytta upp under Logo
+  Second: Fixa en Pagemed UI
+    1. Username #Tag (14324F)
+    2. Profile pick choosing
+
+Logout: Last thing to do is fix login and username etc

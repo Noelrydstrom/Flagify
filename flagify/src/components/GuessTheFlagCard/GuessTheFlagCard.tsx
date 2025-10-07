@@ -1,16 +1,15 @@
-// src/components/HomeCard/HomeCard.tsx
 import { type FC, type ReactNode } from "react";
 import {
     CardWrapper,
 } from "./styles";
 
 
-type HomeCardProps = {
+type GuessTheFlagCardProps = {
   title: string;
   children?: ReactNode;
 };
 
-export const HomeCard: FC<HomeCardProps> = ({ title, children }) => {
+export const GuessTheFlagCard: FC<GuessTheFlagCardProps> = ({ title, children }) => {
   return (
     <CardWrapper>
       <h2>{title}</h2>
@@ -19,4 +18,4 @@ export const HomeCard: FC<HomeCardProps> = ({ title, children }) => {
   );
 };
 
-export default HomeCard;
+export default GuessTheFlagCard;

@@ -2,15 +2,22 @@ import { type FC } from "react";
 import { useNavigate } from "react-router-dom";
 import {
 Sidebar,
-NavList,
+NavListBottom,
+NavListTop,
 NavItem,
 Logo,
 } from "./styles";
 
 export const Navbar: FC = () =>  {
   const navigate = useNavigate();
-  const navItems = [
+
+  const navItemsTop = [
+  //Top items
   { name: "🧑‍🦲Profile", path: "/profile" },
+];
+
+  const navItemsBottom = [
+  //Bottom items
   { name: "⚙️Settings", path: "/settings" },
   { name: "⬅Logout", path: "/logout" },
 ];
@@ -18,9 +25,10 @@ export const Navbar: FC = () =>  {
 
   return (
      <Sidebar>
-      <Logo onClick={() => navigate("Home")}>Flagify🏳️</Logo>
-        <NavList>
-        {navItems.map((item) => (
+      <NavListTop>
+        <Logo onClick={() => navigate("Home")}>Flagify🏳️</Logo>
+        
+        {navItemsTop.map((item) => (
           <NavItem
             key={item.name}
             onClick={() => navigate(item.path)}
@@ -28,7 +36,18 @@ export const Navbar: FC = () =>  {
         {item.name}
           </NavItem>
         ))}
-        </NavList>
+        </NavListTop>
+
+        <NavListBottom>
+        {navItemsBottom.map((item) => (
+          <NavItem
+            key={item.name}
+            onClick={() => navigate(item.path)}
+          >
+        {item.name}
+          </NavItem>
+        ))}
+        </NavListBottom>
     </Sidebar>
   );
 };

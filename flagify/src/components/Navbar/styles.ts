@@ -18,7 +18,7 @@ export const Sidebar = styled.nav`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0rem;
   font-size: 3.4rem;
   font-weight: 750;
   background: linear-gradient(90deg, ${colors.primary}, ${colors.secondary});
@@ -26,9 +26,25 @@ export const Logo = styled.div`
   -webkit-text-fill-color: transparent;
   cursor: pointer;
   transition: transform 0.2s;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-top: -1rem;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
-export const NavList = styled.ul`
+export const NavListTop = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 10;
+  font-size: 25px;
+  justify-content: space-between;
+  margin-left: -1rem;
+`;
+
+export const NavListBottom = styled.ul`
   list-style: none;
   padding: 0;
   margin: 10;
