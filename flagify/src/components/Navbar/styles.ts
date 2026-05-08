@@ -9,7 +9,7 @@ export const breakpoints = {
   xl: "1440px", // large screens
 };
 
-export const Sidebar = styled.nav`
+export const Sidebar = styled.nav<{ open?: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
@@ -21,7 +21,47 @@ export const Sidebar = styled.nav`
   justify-content: space-between;
   padding: 1rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+
+  /* 🖥 DESKTOP (default) */
+  transform: translateX(0);
+
+  /* 📱 TABLET + MOBILE */
+  @media (max-width: ${breakpoints.md}) {
+    transform: ${({ open }) =>
+      open ? "translateX(0)" : "translateX(-100%)"};
+  }
+`;
+
+export const Hamburger = styled.button`
+  display: none;
+
+  @media (max-width: ${breakpoints.md}) {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1101;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: ${colors.primary};
+    cursor: pointer;
+    font: bold 2rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+`;
+
+export const Overlay = styled.div`
+  display: none;
+
+  @media (max-width: ${breakpoints.md}) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+  }
 `;
 
 export const Logo = styled.div`

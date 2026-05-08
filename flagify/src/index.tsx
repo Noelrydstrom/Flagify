@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import { colors } from "./theme/colors";
 import styled from "styled-components";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -15,9 +14,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 );
 
 export const MainContent = styled.main`
-  flex: 1;                 /* takes all remaining width */
-  min-height: 100vh;       /* full viewport height */
-  margin-left: 250px;      /* space for fixed sidebar */
-  padding: 2rem;           /* inner spacing */
-  background-color: ${colors.background}; /* solid color */
+  flex: 1;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: transparent;
+
+  @media (max-width: 600px) {
+    padding: 1rem;
+  }
 `;

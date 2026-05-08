@@ -1,29 +1,36 @@
 import styled from "styled-components";
 import { colors } from "../../theme/colors";
+import { breakpoints } from "../../components/Navbar/styles";
 
 export const Container = styled.div`
   position: relative;
-  top: -10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  gap: 1rem;
   background-color: ${colors.background};
-  transform: translateY(-10rem);
-  width: 100%;
-    margin-top: -4rem;
-    margin-left: -7rem;
-    padding: 2rem;
+  padding: 2rem;
+  top: -19rem;
+  left: -6rem;
+  
+  @media (max-width: ${breakpoints.md}) {
+  padding: 1rem;
+}
 `;
 
 
 export const Avatar = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
+  vw: 180px;
   border-radius: 50%;
   border: 3px solid ${colors.cardTitle};
+  
+  @media (max-width: ${breakpoints.md}) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 export const TagWrapper = styled.div`
@@ -33,9 +40,13 @@ export const TagWrapper = styled.div`
 `;
 
 export const Username = styled.h2`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: ${colors.textPrimary};
+
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const CopyButton = styled.button`
@@ -44,10 +55,15 @@ export const CopyButton = styled.button`
   border: none;
   padding: 0.3rem 0.6rem;
   border-radius: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 2rem;
   cursor: pointer;
 
   &:hover {
     background-color: ${colors.primary};
+  }
+
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.4rem;
   }
 `;
