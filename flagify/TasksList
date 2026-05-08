@@ -2,6 +2,8 @@ KOM IHÅG:
  1.Mycket Commits
  2.Strukturerad kod (Data, logik, UI)
 
+Fixa css logik så allt anppasas för mobil samt desktop!!
+
 Nästa Gång: 
  plocka bort logic samt annat från GussTheFlagGame.tsx
 
@@ -10,16 +12,17 @@ SettingsPage:
  1. Darkmode
  2. Account Features
 
-Games:
- 1. GussTheFlag
+Games: (Acheivements till alla games) Lägg till!!
  2. Daily CHallenge
+ 2. Flagle som tex = Worldle
  3. Gissa landet på kartan
  4. Mer Kommer
 
 Profile:
-  Prio: FLytta upp under Logo
-  Second: Fixa en Pagemed UI
-    1. Username #Tag (14324F)
-    2. Profile pick choosing
+  Acheivements visas
 
-Logout: Last thing to do is fix login and username etc
+Logout: sett upp ett cluster mongodb med users du kan använda thunder client också
+sen när du har ett admin konto och 2 users t.ex. använd dig av tokens RBAC för det 
+Måste: Fixa Remember Me så du inte måste skriva in allt skit efter refresh igen
+
+Leadeerboard: fixa leaderboard i nav också för dina users från ditt cluster med

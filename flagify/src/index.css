@@ -10,5 +10,13 @@ html, body, #root {
   padding: 0;
 }
 
+/* Responsiv styling för mindre skärmar (telefoner) */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem; /* Minska padding för små skärmar */
+    font-size: 14px; /* Mindre textstorlek */
+  }
+}
+
 
 

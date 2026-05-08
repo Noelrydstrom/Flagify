@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
 Sidebar,
 NavListBottom,
@@ -10,6 +10,9 @@ Logo,
 
 export const Navbar: FC = () =>  {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path;
 
   const navItemsTop = [
   //Top items
@@ -26,12 +29,13 @@ export const Navbar: FC = () =>  {
   return (
      <Sidebar>
       <NavListTop>
-        <Logo onClick={() => navigate("Home")}>Flagify🏳️</Logo>
+        <Logo onClick={() => navigate("/home")}>Flagify🏳️</Logo>
         
         {navItemsTop.map((item) => (
           <NavItem
             key={item.name}
             onClick={() => navigate(item.path)}
+            active={isActive(item.path)}
           >
         {item.name}
           </NavItem>
@@ -43,6 +47,7 @@ export const Navbar: FC = () =>  {
           <NavItem
             key={item.name}
             onClick={() => navigate(item.path)}
+            active={isActive(item.path)}
           >
         {item.name}
           </NavItem>

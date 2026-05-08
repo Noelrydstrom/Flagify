@@ -24,7 +24,7 @@ export const StyledButton = styled.button`
   }
 
   &:focus {
-    outline: 2px solid ${colors.accent};
+    outline: 2px solid ${colors.primary};
     outline-offset: 2px;
   }
 

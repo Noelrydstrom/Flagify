@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import GuessTheFlagCard from "../../components/GuessTheFlagCard/GuessTheFlagCard";
 import { getRandomFlags, ALL_FLAGS } from "../../utils/flags/flags";
+import Button from "../../components/Button";
 
 export const GuessTheFlagGame = () => {
   const [availableFlags, setAvailableFlags] = useState(ALL_FLAGS);
@@ -71,24 +72,12 @@ export const GuessTheFlagGame = () => {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
             {options.map(option => (
-              <button
+              <Button
                 key={option}
                 onClick={() => handleGuess(option)}
-                style={{
-                  padding: "0.75rem 1rem",
-                  borderRadius: "0.75rem",
-                  backgroundColor: "#2563EB",
-                  color: "white",
-                  fontWeight: 600,
-                  border: "none",
-                  cursor: "pointer",
-                  transition: "0.2s",
-                }}
-                onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#1E3A8A")}
-                onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#2563EB")}
               >
                 {option}
-              </button>
+              </Button>
             ))}
           </div>
 
