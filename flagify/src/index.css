@@ -11,12 +11,5 @@ html, body, #root {
   overflow-x: hidden;
 }
 
-/* Responsiv styling för mindre skärmar (telefoner) */
-@media (max-width: 600px) {
-  body {
-    padding: 1rem; /* Minska padding för små skärmar */
-  }
-}
-
 
 
