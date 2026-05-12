@@ -13,13 +13,19 @@ export const CardWrapper = styled.div`
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-padding: 1px;
   max-width: 480px;
+  min-width: 240px;
   width: 90%; /* responsive width for mobile */
   height: auto; /* let content define height */
   margin: 2rem auto;
   text-align: center;
   color: ${colors.textPrimary};
   transition: all 0.3s ease;
+
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1.25rem;
+  }
 
   &:hover {
     transform: translateY(-4px);
@@ -35,10 +41,6 @@ export const CardWrapper = styled.div`
     margin-bottom: 1rem;
     letter-spacing: 0.5px;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-
-    @media (min-width: ${breakpoints.md}) {
-      font-size: 2rem;
-    }
   }
 
   p {
