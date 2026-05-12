@@ -82,6 +82,12 @@ export const Logo = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 2.5rem;
+    margin-left: 0.5rem;
+    margin-top: 3.5rem;
+  }
 `;
 
 export const NavListTop = styled.ul`
@@ -116,5 +122,9 @@ export const NavItem = styled.li<{ active?: boolean }>`
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  @media (max-width: ${breakpoints.md}) {
+    padding: 0.8rem 1rem 0.8rem 1.2rem;
   }
 `;
